@@ -4,7 +4,8 @@
   "description": "API REST para CMS projects",
   "main": "src/",
   "scripts": {
-    "test": "nodemon src/"
+    "dev": "cross-env NODE_ENV=development nodemon src/",
+    "start": "cross-env NODE_ENV=production node src/"
   },
   "repository": {
     "type": "git",
