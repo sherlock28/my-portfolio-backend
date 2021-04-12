@@ -1,3 +1,3 @@
 module.exports = {
-    TokenValidation: require('./TokenValidation')
+    TokenValidation: require('./tokenValidation.mdw')
 }
