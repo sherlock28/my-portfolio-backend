@@ -23,6 +23,7 @@
   "author": "Rodolfo Caceres",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "2.4.3",
     "cors": "2.8.5",
     "cross-env": "7.0.3",
     "dotenv": "8.2.0",
