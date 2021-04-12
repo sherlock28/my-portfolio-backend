@@ -5,6 +5,7 @@ module.exports = {
     getProjects: require("./projects/getProjects.ctrl"),
   },
   usersCtrl: {
+    signUp: require("./users/signUp.ctrl"),
     signIn: require("./users/signIn.ctrl"),
     signOut: require("./users/signOut.ctrl"),
   },
