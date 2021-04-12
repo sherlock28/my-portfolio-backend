@@ -5,6 +5,7 @@ const multer = require("multer");
 const express = require("express");
 
 // initializations
+require('./database');
 const app = express();
 
 // settings
