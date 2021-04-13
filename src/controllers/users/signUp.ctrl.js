@@ -22,8 +22,8 @@ const signUp = async (req, res) => {
     });
   } else {
     res.status(400).json({
-      status: 'error',
-      message: 'the email is already in use',
+      status: 'Error',
+      message: 'The email is already in use',
     });
   }
 };

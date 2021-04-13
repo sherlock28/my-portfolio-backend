@@ -6,6 +6,7 @@ const signIn = async (req, res) => {
   const user = await User.findOne({ email: req.body.email });
   if (user === null) {
     res.status(400).json({
+      status: "Error",
       message: "Invalid credentials",
     });
   } else {
@@ -17,7 +18,7 @@ const signIn = async (req, res) => {
     if (isCorrectPass) {
       const token = await jwt.sign(
         {
-          id: user._id,
+          _id: user._id,
           username: user.username,
           email: user.email,
         },
@@ -36,10 +37,11 @@ const signIn = async (req, res) => {
         })
         .json({
           status: "Ok",
-          message: "You are authenticated",
+          message: "You are logged in",
         });
     } else {
       res.status(400).json({
+        status: "Error",
         message: "Invalid credentials",
       });
     }

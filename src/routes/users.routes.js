@@ -4,6 +4,6 @@ const { users } = require("../middlewares");
 
 router.post("/signup", users.fieldUserValidation, usersCtrl.signUp);
 router.post("/signin", usersCtrl.signIn);
-router.post("/signout", usersCtrl.signOut);
+router.post("/signout", users.tokenValidation, usersCtrl.signOut);
 
 module.exports = router;
