@@ -3,6 +3,7 @@ require("dotenv").config();
 const path = require("path");
 const multer = require("multer");
 const express = require("express");
+const cors = require("cors");
 
 // initializations
 require("./database");
@@ -12,6 +13,7 @@ const app = express();
 app.set("port", process.env.PORT);
 
 // middlewares
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 const storage = multer.diskStorage({
