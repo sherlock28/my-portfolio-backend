@@ -1,3 +1,6 @@
 module.exports = {
-    TokenValidation: require('./tokenValidation.mdw')
-}
+  users: {
+    tokenValidation: require("./user/tokenValidation.mdw"),
+    fieldUserValidation: require("./user/fieldUserValidation,mdw"),
+  },
+};

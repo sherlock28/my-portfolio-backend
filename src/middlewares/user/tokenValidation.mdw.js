@@ -1,4 +1,4 @@
-const tokenValidation = (req, res, next) => {
+const tokenValidation = async (req, res, next) => {
     
     /*Se obtiene el token enviado */
     const token = req.header('Authorization');
