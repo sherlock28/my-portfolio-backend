@@ -1,5 +1,19 @@
-const getProjects = (req, res) => {
-    res.json({ msg: 'getProjects' });
-}
+const { Project } = require("../../models");
+
+const getProjects = async (req, res) => {
+  try {
+    const projects = await Project.find().lean();
+    res.json({
+      status: "Ok",
+      message: "getProjects",
+      data: {
+        projects,
+      },
+    });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ status: "Error", message: "Internal server error" });
+  }
+};
 
 module.exports = getProjects;
