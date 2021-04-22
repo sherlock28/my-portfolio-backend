@@ -12,7 +12,7 @@ const signOut = async (req, res) => {
       message: "Invalid token",
     });
   } else {
-    await User.update(query, { $unset: { token: 1 } });
+    await User.updateOne(query, { $unset: { token: 1 } });
     res.json({ status: "Ok", message: "You are logged out" });
   }
 };

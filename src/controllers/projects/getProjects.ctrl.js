@@ -5,7 +5,7 @@ const getProjects = async (req, res) => {
     const projects = await Project.find().lean();
     res.json({
       status: "Ok",
-      message: "getProjects",
+      message: "List of all projects",
       data: {
         projects,
       },
