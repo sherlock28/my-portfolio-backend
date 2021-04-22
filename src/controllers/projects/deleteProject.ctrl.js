@@ -3,9 +3,9 @@ const { Project } = require("../../models");
 
 const deleteProjects = async (req, res) => {
   try {
-    const { public_id } = req.params;
+    const { id_project } = req.params;
 
-    const project = await Project.findOneAndRemove(public_id);
+    const project = await Project.findByIdAndRemove(id_project);
 
     const result = await cloudinary.uploader.destroy(project.public_id);
   
