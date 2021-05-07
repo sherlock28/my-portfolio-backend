@@ -9,12 +9,19 @@ const putProject = async (req, res) => {
 
     const deleteResult = await cloudinary.uploader.destroy(project.public_id);
 
-    const saveResult = await cloudinary.uploader.upload(req.file.path);
+    const imageSaved = await cloudinary.uploader.upload(req.file.path);
 
     const projectUpdated = await Project.findByIdAndUpdate(
       { _id: id_project },
       {
-        $set: { title, description, repositoryURL, pageURL },
+        $set: {
+          title,
+          description,
+          repositoryURL,
+          pageURL,
+          imageURL: imageSaved.secure_url,
+          public_id: imageSaved.public_id,
+        },
       },
       { new: true }
     );
