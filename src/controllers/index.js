@@ -3,6 +3,7 @@ module.exports = {
     deleteProject: require("./projects/deleteProject.ctrl"),
     postProject: require("./projects/postProject.ctrl"),
     getProjects: require("./projects/getProjects.ctrl"),
+    putProjects: require("./projects/editProject.ctrl"),
   },
   usersCtrl: {
     signUp: require("./users/signUp.ctrl"),
