@@ -1,4 +1,6 @@
+const { cloudinary } = require("../../config");
 const { Project } = require("../../models");
+const fs = require("fs-extra");
 
 const putProject = async (req, res) => {
   try {
