@@ -4,7 +4,8 @@ module.exports = {
     postProject: require("./projects/postProject.ctrl"),
     getProjects: require("./projects/getProjects.ctrl"),
     putProjects: require("./projects/editProject.ctrl"),
-    getProjectById: require("./projects/getProjectById.ctrl")
+    getProjectById: require("./projects/getProjectById.ctrl"),
+    getPublicProjects: require("./projects/getPublicProjects")
   },
   usersCtrl: {
     signUp: require("./users/signUp.ctrl"),
