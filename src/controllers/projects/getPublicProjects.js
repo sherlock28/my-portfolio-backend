@@ -5,7 +5,7 @@ const getPublicProjects = async (req, res) => {
     const projects = await Project.find({},{
       _id: 1,
       title: 1,
-      descrrepositoryURLiption: 1,
+      description: 1,
       repositoryURL: 1,
       pageURL: 1,
       imageURL: 1,
