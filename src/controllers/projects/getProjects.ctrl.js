@@ -12,7 +12,7 @@ const getProjects = async (req, res) => {
     });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ status: "Error", message: "Internal server error" });
+    res.status(500).json({ status: "Error", error: err, message: "Internal server error" });
   }
 };
 
